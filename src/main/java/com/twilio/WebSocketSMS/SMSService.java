@@ -12,19 +12,19 @@ import java.net.URI;
 @Component
 public class SMSService {
 
-    @Value("#{systemEnvironment['TWILIO_ACCOUNT_SID']}")
-    private String ACCOUNT_SID;
+//    @Value("#{systemEnvironment['TWILIO_ACCOUNT_SID']}")
+    private String ACCOUNT_SID = "ACb45ed0986a998cb5649e217e8c07afb4";
 
     /*
     @Value("#{systemEnvironment['COMPONENT_PARAM_CORS'] ?: 'DEFAULT_VALUE'}")
 private String COMPONENT_PARAM_CORS;
      */
 
-    @Value("#{systemEnvironment['TWILIO_AUTH_TOKEN']}")
-    private String AUTH_TOKEN;
+//    @Value("#{systemEnvironment['TWILIO_AUTH_TOKEN']}")
+    private String AUTH_TOKEN = "93e9b5e67ac093005bd43290598e99df";
 
-    @Value("#{systemEnvironment['TWILIO_PHONE_NUMBER']}")
-    private String FROM_NUMBER;
+//    @Value("#{systemEnvironment['TWILIO_PHONE_NUMBER']}")
+    private String FROM_NUMBER ="+19378702799";
 
     public void send(SMS sms) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
